@@ -3,9 +3,12 @@
 var app = (function($, window, document, undefined) {
     var $window = $(window),
         $document = $(document),
-
+        insta,
+        gameOver,
     init = function () {
-        tetris();
+        invaders();
+        editor();
+        instagram();
     },
     invaders = function () {
         var cols = {
@@ -18,10 +21,13 @@ var app = (function($, window, document, undefined) {
                 "col7": [false,true,true,true,false,false,true,true,true],
                 "col8": [false,false,false,false,false,false,false,false,true]
             },
-            hits = 0;
+            hits = 0,
+            bulletFly = false;
         $(".box").click(function (event) {
+            if(bulletFly || gameOver)
+                return;
             var $this = $(this),
-                places = [0,76,152,228,304,380,456,532,608],
+                places = [0,46,92,138,184,230,276,322,368],
                 column,
                 mousePos = {
                     x: event.clientX,
@@ -30,19 +36,17 @@ var app = (function($, window, document, undefined) {
                 },
                 $bullet = $("#bullet");
 
-            $bullet.css("top","700px");
-            $bullet.css("left",mousePos.x - 7);
+            $bullet.css("top","490px");
+            $bullet.css("left",mousePos.x - 5);
             //find column
-            console.log(mousePos.relX);
             for(var i = 0; i < places.length; i++){
-                if(places[i] + 76 < mousePos.relX){
+                if(places[i] + 46 < mousePos.relX){
                     column = i + 2;
                 }
             }
             if(!column)
                 column = 1;
             //find item
-            console.log("col", column);
             var col = cols["col" + column],
                 item;
             for(var j = 0; j < col.length; j++){
@@ -56,32 +60,76 @@ var app = (function($, window, document, undefined) {
             //find element
             var $element = $(".col" + column + "." + item),
                 bottom = -30;
-            if($element.length)
-                bottom = "-=" + (700 - $element.offset().top - 76);
+            if($element.length) {
+                hits++;
+                bottom = "-=" + (490 - $element.offset().top - 46);
+            }
             //show and animate bullet
             $bullet.show();
+            bulletFly = true;
             $bullet.supremate({"top": bottom},1300,'swing',function(){
+                bulletFly = false;
                 $element.addClass("explosion");
                 $bullet.hide();
-                hits++;
+
                 if(hits === 40){
-                    $(".box").html("<h2 style='font-size:100px;text-align:center;margin-top:100px;'>You win!!!</h2>")
+                    $( ".item" ).each(function( index ) {
+                        var ind= index;
+                        console.log(ind);
+                        var $that = $(this);
+                        var cap = "";
+                        if(insta[ind].caption){
+                            cap = insta[ind].caption.text;
+                            console.log(cap);
+                        }
+                        $that.show().html("<a href='"+ insta[ind].images.standard_resolution.url +"'><img alt='" + cap + "' src='" + insta[ind].images.thumbnail.url + "'/></a>");
+                    });
+                    $(".item a").fluidbox();
+                    $(".item1.col1").show();
+                    $("#shoter").width("auto").text("@dinodsaurus");
+                    gameOver = true;
+                }else{
+                    setTimeout(function () {
+                        $element.hide();
+                    },270);
                 }
-                setTimeout(function () {
-                    $element.hide();
-                },270);
             });
         })
         $(".box").mousemove(function( event ) {
-            handleMouseMove(event);
+            if(!gameOver)
+                handleMouseMove(event);
         });
         function handleMouseMove(event) {
             event = event || window.event; // IE-ism
             var mousePos = {
                 x: event.clientX
             };
-            $("#shoter").css("left", mousePos.x - 35);
+            $("#shoter").css("left", mousePos.x - 45);
         }
+    },
+    editor = function () {
+        var $edit = $(".edit")
+        for(var i=2; i < 100; i++){
+            $( "#num").find("li:first-child").clone().text(i).appendTo( "#num" );
+        }
+    },
+    instagram = function () {
+        function shuffle(o){ //v1.0
+            for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+            return o;
+        };
+        var base = "https://api.instagram.com/v1/users/318953138/media/recent?client_id=036e1503210046a59931ed2cbcf2924d&count=20";
+        $.getJSON( base + "&callback=?", function( data ) {
+            insta = data.data;
+            console.log(insta);
+            $.getJSON( base + "&max_id=" + insta[insta.length-1].id + "&callback=?", function( data ) {
+                for(var i=0;i< data.data.length;i++){
+                    insta.push(data.data[i]);
+                }
+                insta = shuffle(insta);
+                console.log(insta);
+            });
+        });
     },
     tetris = function () {
         var cols = {

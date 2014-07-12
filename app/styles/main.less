@@ -1,5 +1,36 @@
 @import "reset.less";
+@font-face {font-family: 'Pexico-Regular';src: url('../fonts/2B63DD_0_0.eot');src: url('../fonts/2B63DD_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/2B63DD_0_0.woff') format('woff'),url('../fonts/2B63DD_0_0.ttf') format('truetype');}
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+@black: #282828;
+@white: #f8f8f2;
+@pink: #f9266b;
+@green: #a6e22e;
+@yellow: #e6db6c;
+@ligthtYellow: #666633;
+a{
+  color:@yellow;
+  text-decoration:none;
+}
+body{
+  font-family: "Pexico-Regular";
+}
+.pink{
+  color:@pink;
+}
+.green{
+  color:@green;
+}
+.yellow{
+  color:@yellow;
+}
 
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 .container{
   width:960px;
   margin:0 auto;
@@ -8,74 +39,80 @@
   position:relative;
   width:100%;
   height:20px;
-  width: 600px;
-  height:730px;
+  width: 370px;
+  height:500px;
   margin:0 auto;
 }
 .item{
   cursor:pointer;
   position:absolute;
-  width:75px;
-  background:#444;
-  height:75px;
+  width:45px;
+  background:@black;
+  height:45px;
+  img{
+    width:45px;
+  }
 }
 .item9{
   top:0;
 }
 .item8{
-  top:76px;
+  top:46px;
 }
 .item7{
-  top:152px;
+  top:92px;
 }
 .item6{
-  top:228px;
+  top:138px;
 }
 .item5{
-  top:304px;
+  top:184px;
 }
 .item4{
-  top:380px;
+  top:230px;
 }
 .item3{
-  top:456px;
+  top:276px;
 }
 .item2{
-  top:532px;
+  top:322px;
 }
 .item1{
-  top:608px;
+  top:368px;
 }
 .col2{
-  left:76px;
+  left:46px;
 }
 .col3{
-  left:152px;
+  left:92px;
 }
 .col4{
-  left:228px;
+  left:138px;
 }
 .col5{
-  left:304px;
+  left:184px;
 }
 .col6{
-  left:380px;
+  left:230px;
 }
 .col7{
-  left:456px;
+  left:276px;
 }
 .col8{
-  left:532px;
+  left:322px;
 }
+
 .item.explosion{
   background: url("../images/explosion.gif") no-repeat;
   background-position:center center;
+  background-size:100% auto;
 }
 #bullet{
+  display:none;
   position:absolute;
-  top:700px;
-  width: 15px;
-  height:15px;
+  top:490px;
+  width: 10px;
+  height:10px;
   background:black;
 }
 #shoter{
@@ -83,5 +120,100 @@
   width:70px;
   height:30px;
   background:black;
-  top:720px;
+  top:490px;
+  left:50%;
+  color: white;
+  line-height: 30px;
+  padding: 0px 10px;
 }
+
+.editor{
+  position:relative;
+  width: 100%;
+  background:@black;
+  margin-top:50px;
+  font-family: Courier;
+  color:@white;
+  overflow: hidden;
+  ul{
+    position:absolute;
+    background:#303030;
+    padding-right:20px;
+    padding-top:10px;
+    width:30px;
+    li{
+      color:#a7a7a3;
+      width:30px;
+      text-align: right;
+      font-size:16px;
+    }
+  }
+  .cont{
+    padding-top:10px;
+    float:left;
+    padding-bottom:30px;
+    padding-left:50px;
+  }
+  ::selection {
+    background:@ligthtYellow;
+    opacity:1;
+  }
+
+
+  ::-moz-selection {
+    background:@ligthtYellow;
+    opacity:1;
+  }
+
+}
+.fluidbox {
+  outline: none;
+}
+.fluidbox-overlay {
+  cursor: pointer;
+  cursor: -webkit-zoom-out;
+  cursor: -moz-zoom-out;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transition: all .25s ease-in-out;
+}
+.fluidbox-wrap {
+  background-position: center center;
+  background-size: cover;
+  margin: 0 auto;
+  position: relative;
+  transition: all .25s ease-in-out;
+}
+.fluidbox-ghost {
+  background-size: cover;
+  background-position: center center;
+  position: absolute;
+  transition: all .25s ease-in-out;
+  p{
+    font-size: 3px;
+    position: absolute;
+    bottom: 0;
+    padding: 1px 0 0 1px;
+    width:100%;
+    background:black;
+    opacity:.8;
+    color:white;
+  }
+}
+.fluidbox-closed .fluidbox-ghost {
+  -webkit-transition-property: top, left, opacity, -webkit-transform;
+  -moz-transition-property: top, left, opacity, -moz-transform;
+  -o-transition-property: top, left, opacity, -o-transform;
+  transition-property: top, left, opacity, transform;
+  transition-delay: 0, 0, .25s, 0;
+}
+.fluidbox-closed .fluidbox-wrap img {
+  transition-property: opacity;
+  transition-delay: .25s;
+  transition-duration: 0s;
+}
+
