@@ -6,9 +6,27 @@ var app = (function($, window, document, undefined) {
         insta,
         gameOver,
     init = function () {
+        nav();
         invaders();
         editor();
         instagram();
+    },
+    nav = function () {
+        $window.scroll(function() {
+            var top = $window.scrollTop(),
+                $bor = $(".bor");
+            if(top > 100){
+                if(!$bor.hasClass("active")){
+                    $bor.addClass("active")
+                    $bor.fadeIn();
+                }
+            }else{
+                if($bor.hasClass("active")){
+                    $bor.removeClass("active")
+                    $bor.fadeOut();
+                }
+            }
+        });
     },
     invaders = function () {
         var cols = {
@@ -27,7 +45,7 @@ var app = (function($, window, document, undefined) {
             if(bulletFly || gameOver)
                 return;
             var $this = $(this),
-                places = [0,46,92,138,184,230,276,322,368],
+                places = [0,36,72,108,144,180,216,252,288],
                 column,
                 mousePos = {
                     x: event.clientX,
@@ -73,19 +91,7 @@ var app = (function($, window, document, undefined) {
                 $bullet.hide();
 
                 if(hits === 40){
-                    $( ".item" ).each(function( index ) {
-                        var ind= index;
-                        console.log(ind);
-                        var $that = $(this);
-                        var cap = "";
-                        if(insta[ind].caption){
-                            cap = insta[ind].caption.text;
-                            console.log(cap);
-                        }
-                        $that.show().html("<a href='"+ insta[ind].images.standard_resolution.url +"'><img alt='" + cap + "' src='" + insta[ind].images.thumbnail.url + "'/></a>");
-                    });
-                    $(".item a").fluidbox();
-                    $(".item1.col1").show();
+
                     $("#shoter").width("auto").text("@dinodsaurus");
                     gameOver = true;
                 }else{
@@ -113,6 +119,20 @@ var app = (function($, window, document, undefined) {
             $( "#num").find("li:first-child").clone().text(i).appendTo( "#num" );
         }
     },
+    showInsta = function () {
+        $( ".item" ).each(function( index ) {
+            var ind= index;
+            var $that = $(this);
+            var cap = "";
+            if(insta[ind].caption){
+                cap = insta[ind].caption.text;
+                console.log(cap);
+            }
+            $that.show().html("<a href='"+ insta[ind].images.standard_resolution.url +"'><img alt='" + cap + "' src='" + insta[ind].images.thumbnail.url + "'/></a>");
+        });
+        $(".item a").fluidbox();
+        $(".item1.col1").show();
+    },
     instagram = function () {
         function shuffle(o){ //v1.0
             for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
@@ -127,7 +147,7 @@ var app = (function($, window, document, undefined) {
                     insta.push(data.data[i]);
                 }
                 insta = shuffle(insta);
-                console.log(insta);
+                showInsta();
             });
         });
     },
