@@ -91,8 +91,8 @@ var app = (function($, window, document, undefined) {
                 $bullet.hide();
 
                 if(hits === 40){
-
-                    $("#shoter").width("auto").text("@dinodsaurus");
+                    showInsta();
+                    $("#shoter").width("auto").html("<a href='https://twitter.com/dinodsaurus' target='_blank'>@dinodsaurus</a>");
                     gameOver = true;
                 }else{
                     setTimeout(function () {
@@ -147,7 +147,6 @@ var app = (function($, window, document, undefined) {
                     insta.push(data.data[i]);
                 }
                 insta = shuffle(insta);
-                showInsta();
             });
         });
     },
