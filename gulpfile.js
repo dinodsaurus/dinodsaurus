@@ -14,7 +14,7 @@ gulp.task('styles', function () {
 });
 
 gulp.task('scripts', function () {
-    return gulp.src('app/scripts/**/*.js')
+    return gulp.src('app/scripts/*.js')
         .pipe($.size());
 });
 

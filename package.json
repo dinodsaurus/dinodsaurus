@@ -1,6 +1,10 @@
 {
   "name": "dinodsaurus",
   "version": "0.0.0",
+  "scripts": {
+    "start": "gulp serve",
+    "dist": "gulp"
+  },
   "dependencies": {
     "gulp-less": "^1.2.3"
   },
