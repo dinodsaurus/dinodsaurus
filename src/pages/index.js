@@ -30,38 +30,38 @@ const IndexPage = () => (
             },
             {
                 image: Layer7,
-                amount: 0.5,
-                slowerScrollRate: false,
+                amount: 0.05,
+                slowerScrollRate: true,
             },
             {
                 image: Layer6,
-                amount: 0.4,
-                slowerScrollRate: false,
+                amount: 0.1,
+                slowerScrollRate: true,
             },
             {
                 image: Layer5,
-                amount: 0.2,
-                slowerScrollRate: false,
+                amount: 0.15,
+                slowerScrollRate: true,
             },
             {
                 image: Layer4,
-                amount: 0.1,
-                slowerScrollRate: false,
+                amount: 0.20,
+                slowerScrollRate: true,
             },
             {
               image: Layer3,
-              amount: 0.2,
-              slowerScrollRate: false,
+              amount: 0.25,
+              slowerScrollRate: true,
           },
           {
             image: Layer2,
-            amount: 0.05,
-            slowerScrollRate: true,
+            amount: 0.1,
+            slowerScrollRate: false,
         },
         {
           image: Layer1,
-          amount: 0.2,
-          slowerScrollRate: true,
+          amount: 0.1,
+          slowerScrollRate: false,
       },
         ]}
         style={{
