@@ -12,64 +12,65 @@ import Layer7 from "../img/7.png";
 import Layer8 from "../img/8.png";
 import Layer9 from "../img/9.png";
 
-const IndexPage = () => (
-  <div>
-    <ParallaxProvider>
-      <ParallaxBanner
-        className="Head"
-        layers={[
-            {
-                image: Layer9,
-                amount: 0,
-                slowerScrollRate: false,
-            },
-            {
-                image: Layer8,
-                amount: 0,
-                slowerScrollRate: false,
-            },
-            {
-                image: Layer7,
-                amount: 0.05,
+const IndexPage = () => {
+  const width = window.innerWidth;
+  const height = width / 1.7;
+  console.log(height);
+  return (
+    <div style={{ background: "#0C2A3C", "line-height": 0}}>
+      <ParallaxProvider>
+        <ParallaxBanner
+          className="Head"
+          layers={[
+              {
+                  image: Layer8,
+                  amount: 0,
+                  slowerScrollRate: false,
+              },
+              {
+                  image: Layer7,
+                  amount: 0.05,
+                  slowerScrollRate: true,
+              },
+              {
+                  image: Layer6,
+                  amount: 0.1,
+                  slowerScrollRate: true,
+              },
+              {
+                  image: Layer5,
+                  amount: 0.15,
+                  slowerScrollRate: true,
+              },
+              {
+                  image: Layer4,
+                  amount: 0.20,
+                  slowerScrollRate: true,
+              },
+              {
+                image: Layer3,
+                amount: 0.25,
                 slowerScrollRate: true,
             },
             {
-                image: Layer6,
-                amount: 0.1,
-                slowerScrollRate: true,
-            },
-            {
-                image: Layer5,
-                amount: 0.15,
-                slowerScrollRate: true,
-            },
-            {
-                image: Layer4,
-                amount: 0.20,
-                slowerScrollRate: true,
-            },
-            {
-              image: Layer3,
-              amount: 0.25,
-              slowerScrollRate: true,
+              image: Layer2,
+              amount: 0.1,
+              slowerScrollRate: false,
           },
           {
-            image: Layer2,
+            image: Layer1,
             amount: 0.1,
             slowerScrollRate: false,
         },
-        {
-          image: Layer1,
-          amount: 0.1,
-          slowerScrollRate: false,
-      },
-        ]}
-        style={{
-            height: '700',
-        }}
-    />
-  </ParallaxProvider>
-  </div>
-)
+          ]}
+          style={{
+              height: height,
+          }}
+      />
+    </ParallaxProvider>
+    <img src={Layer9}  style={{ margin: 0 }}/>
+    </div>
+  )
+}
 
 export default IndexPage
