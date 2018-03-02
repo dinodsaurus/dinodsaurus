@@ -13,8 +13,8 @@ import Layer8 from "../img/8.png";
 import Layer9 from "../img/9.png";
 
 const IndexPage = () => {
-  const width = window.innerWidth;
-  const height = width / 1.7;
+  const width = typeof window !== 'undefined' ? window.innerWidth : 1200
+  const height = width / 1.8;
   console.log(height);
   return (
     <div style={{ background: "#0C2A3C", "line-height": 0}}>
