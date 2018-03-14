@@ -1,0 +1,15 @@
+.container {
+    text-align: center;
+}
+
+.title {
+    text-align: center;
+    font-size:48px;
+    font-family: "Zico Sans Heavy";
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #8a8a8a;
+    line-height: 1.33;
+}

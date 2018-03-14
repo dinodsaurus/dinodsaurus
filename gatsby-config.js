@@ -1,6 +1,22 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: "Dino Trojak | dinodsaurus"
   },
-  plugins: ['gatsby-plugin-react-helmet'],
+  plugins: [
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-react-css-modules",
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: ["gatsby-remark-component"]
+      }
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "src",
+        path: `${__dirname}/src`
+      }
+    }
+  ]
 };
