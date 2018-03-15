@@ -1,0 +1,52 @@
+.postContainer{
+    flex: .32;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+.longCointainer{
+    flex: .66;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+.mainImg {
+    width: 100%;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: transform
+    /* &:hover {
+        transform: scale(1.2);
+    } */
+}
+.desc {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 20px;
+}
+.titleDark {
+    font-size: 40px;
+}
+.titleLight {
+    font-size: 40px;
+    color: white;
+}
+.data {
+    border-left: 4px solid #ffa40b;
+    margin-top: 15px;
+    padding-left: 10px;
+}
+.tagsDark {
+    font-size: 16px;
+}
+.tagsLight {
+    font-size: 16px;
+    color: white;
+}
+.dateLight {
+    font-size: 16px;
+    color: white;
+}
