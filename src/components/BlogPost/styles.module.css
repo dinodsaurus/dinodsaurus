@@ -1,3 +1,5 @@
+@import "../../common/variables.css";
+
 .postContainer{
     position: relative;
     display: inline-block;
@@ -25,19 +27,25 @@
 }
 .desc {
     position: absolute;
-    bottom: 0;
+    bottom: -52px;
     width: 100%;
     padding: 20px;
+    transition: bottom .3s;
+    &:hover {
+        bottom: 0;
+    }
 }
 .titleDark {
+    font-family: var(--heavy);
     font-size: 40px;
 }
 .titleLight {
+    font-family: var(--heavy);
     font-size: 40px;
     color: white;
 }
 .data {
-    border-left: 4px solid #ffa40b;
+    border-left: 4px solid var(--orange);
     margin-top: 15px;
     padding-left: 10px;
 }
