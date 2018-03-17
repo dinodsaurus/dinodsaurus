@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import PageTitle from "../components/PageTitle";
 import BlogPost from "../components/BlogPost";
+import Pagination from "../components/Pagination";
 
 const IndexPage = ({ data }) => {
   const { allMarkdownRemark } = data;
@@ -22,6 +23,7 @@ const IndexPage = ({ data }) => {
           <BlogPost img="https://p.vitalmtb.com/photos/users/2/slideshows/9999/photos/22934/s1200_slideshow_photo_1460157605.jpg" />
 
         </div>
+        <Pagination />
       </div>
       <Footer />
       {/* <div>{renderAst(posts[0].node.htmlAst)}</div> */}

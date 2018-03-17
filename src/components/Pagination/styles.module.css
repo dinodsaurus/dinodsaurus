@@ -1,0 +1,38 @@
+@import "../../common/variables.css";
+a {
+    color: #a8a8a8;
+    text-decoration: none;
+    transition: .3s;
+    &:hover {
+        color: black;
+    }
+}
+.container {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    font-size: 24px;
+    color: #a8a8a8;
+    margin-top: 100px;
+}
+.content {
+    margin: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-left: 1px solid #dcdcdc;
+    border-right: 1px solid #dcdcdc;
+    justify-content: center;
+}
+.link {
+    margin-right:25px;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+.linkActive {
+    margin-right:25px;
+    font-family: var(--heavy);
+    color: black;
+    border-bottom: 4px solid #ffa40b;
+}
