@@ -30,9 +30,3 @@ a {
         margin-right: 0;
     }
 }
-.linkActive {
-    margin-right:25px;
-    font-family: var(--heavy);
-    color: black;
-    border-bottom: 4px solid #ffa40b;
-}

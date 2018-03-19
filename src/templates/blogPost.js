@@ -21,16 +21,12 @@ class IndexPage extends Component {
     );
   }
   render() {
-    const { allMarkdownRemark } = this.props.data;
-    const { edges: posts } = allMarkdownRemark;
     return (
       <div>
         <Header />
         <div className="container">
           <PageTitle />
-          <div className="grid">
-            {posts.map(IndexPage.renderBlogPost)}
-          </div>
+
           <Pagination />
         </div>
         <Footer />
@@ -43,30 +39,26 @@ IndexPage.propTypes = {
   data: PropTypes.object
 };
 
-export const IndexQuery = graphql`
- query IndexQuery {
-   allMarkdownRemark {
-     totalCount
-     edges {
-       node {
-         id
-         frontmatter {
-           path
-           title
-           tags
-           date(formatString: "Do MMMM YYYY")
-           thumbnail {
-            childImageSharp {
-              responsiveSizes(maxWidth: 700) {
-                src
-              }
+export const BlogPostQuery = graphql`
+query BlogPostByPath($path: String!) {
+    markdownRemark(frontmatter: {path: {eq: $path}}) {
+      html
+      id
+      frontmatter {
+        path
+        title
+        tags
+        date(formatString: "Do MMMM YYYY")
+        thumbnail {
+          childImageSharp {
+            responsiveSizes(maxWidth: 700) {
+              src
             }
           }
-         }
-       }
-     }
-   }
- }
+        }
+      }
+    }
+  }
 `;
 
 export default IndexPage;
