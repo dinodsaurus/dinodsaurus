@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import Image from "gatsby-image";
 import { renderAst } from "../helpers/markdownTemplate";
 
-
+import PageNav from "../components/PageNav";
 import Footer from "../components/Footer";
 
 import styles from "./blogPost.module.css";
@@ -28,6 +28,7 @@ const BlogPost = (props) => {
       <div className={styles.content}>
         {renderAst(htmlAst)}
       </div>
+      <PageNav prev={prev} next={next} />
       <Footer />
     </div>
   );

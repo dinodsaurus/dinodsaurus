@@ -1,0 +1,41 @@
+@import "../../common/variables.css";
+
+.nav {
+    display: flex;
+    margin: 65px auto;
+    max-width: 800px;
+    flex-direction: row;
+    border-top: 1px solid #d8d8d8;
+    padding-top: 65px;
+}
+.post {
+    flex-direction: row;
+    flex: 0.5;
+    &:first-child {
+        margin-right: 10px;
+    }
+    &:last-child {
+        margin-left: 10px;
+    }
+}
+.img {
+    height: 100px;
+    width: 100%;
+    overflow: hidden;
+    background-size: cover;
+}
+.desc {
+    padding: 0 15px;
+    border-left: 4px solid var(--orange);
+    margin-bottom: 15px;
+}
+.title {
+    font-size: 32px;
+    font-family: var(--heavy);
+}
+
+.desc p {
+    font-size: 18px;
+    color: #afafaf;
+    margin-top: 5px;
+}
