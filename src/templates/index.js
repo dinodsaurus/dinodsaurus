@@ -16,7 +16,6 @@ class IndexPage extends Component {
       <BlogPost
         key={i}
         post={post}
-        img="https://p.vitalmtb.com/photos/users/2/slideshows/9999/photos/22934/s1200_slideshow_photo_1460157605.jpg"
       />
     );
   }

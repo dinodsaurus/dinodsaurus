@@ -1,8 +1,8 @@
-import React from 'react'
-import RehypeReact from 'rehype-react'
-import Header from '../components/Header'
- 
+import React from "react";
+import RehypeReact from "rehype-react";
+import Strava from "../components/Strava";
+
 export const renderAst = new RehypeReact({
   createElement: React.createElement,
-  components: { header: Header }
-}).Compiler
+  components: { strava: Strava }
+}).Compiler;

@@ -1,11 +1,12 @@
 import React from "react";
+import Link from "gatsby-link";
 import PropTypes from "prop-types";
 import styles from "./styles.module.css";
 
 const BlogPost = ({
   light, noBg, long, post
 }) => (
-  <div className={long ? styles.longCointainer : styles.postContainer}>
+  <Link to={post.path} className={long ? styles.longCointainer : styles.postContainer}>
     <div
       className={styles.mainImg}
       style={{
@@ -19,7 +20,7 @@ const BlogPost = ({
         <p className={light ? styles.dateLight : styles.dateDark}>{post.date}</p>
       </div>
     </div>
-  </div>
+  </Link>
 );
 
 BlogPost.propTypes = {

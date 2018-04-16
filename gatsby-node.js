@@ -22,7 +22,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             date(formatString: "Do MMMM YYYY")
             thumbnail {
              childImageSharp {
-               responsiveSizes(maxWidth: 700) {
+               responsiveSizes(maxWidth: 1128) {
                  src
                }
              }

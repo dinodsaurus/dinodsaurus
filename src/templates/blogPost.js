@@ -1,48 +1,46 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-// import { renderAst } from "../helpers/markdownTemplate";
+import Image from "gatsby-image";
+import { renderAst } from "../helpers/markdownTemplate";
 
 
-import Header from "../components/Header";
 import Footer from "../components/Footer";
-import PageTitle from "../components/PageTitle";
-import BlogPost from "../components/BlogPost";
-import Pagination from "../components/Pagination";
 
-class IndexPage extends Component {
-  static renderBlogPost({ node }, i) {
-    const { frontmatter: post } = node;
-    return (
-      <BlogPost
-        key={i}
-        post={post}
-        img="https://p.vitalmtb.com/photos/users/2/slideshows/9999/photos/22934/s1200_slideshow_photo_1460157605.jpg"
-      />
-    );
-  }
-  render() {
-    return (
-      <div>
-        <Header />
-        <div className="container">
-          <PageTitle />
+import styles from "./blogPost.module.css";
 
-          <Pagination />
+const BlogPost = (props) => {
+  const { frontmatter: post, htmlAst } = props.data.markdownRemark;
+  const { prev, next } = props.pathContext;
+  const { sizes } = post.thumbnail.childImageSharp;
+  console.log(prev);
+  console.log(next);
+  return (
+    <div>
+      <div className="container">
+        <div>
+          <h1 className={styles.title}>{post.title}</h1>
+          <p className={styles.desc}>{post.tags.toString()} • {post.date}</p>
         </div>
-        <Footer />
       </div>
-    );
-  }
-}
+      <div className={styles.headImgCont}>
+        <Image sizes={sizes} />
+      </div>
+      <div className={styles.content}>
+        {renderAst(htmlAst)}
+      </div>
+      <Footer />
+    </div>
+  );
+};
 
-IndexPage.propTypes = {
+BlogPost.propTypes = {
   data: PropTypes.object
 };
 
 export const BlogPostQuery = graphql`
 query BlogPostByPath($path: String!) {
     markdownRemark(frontmatter: {path: {eq: $path}}) {
-      html
+      htmlAst
       id
       frontmatter {
         path
@@ -51,8 +49,8 @@ query BlogPostByPath($path: String!) {
         date(formatString: "Do MMMM YYYY")
         thumbnail {
           childImageSharp {
-            responsiveSizes(maxWidth: 700) {
-              src
+            sizes(maxWidth: 1200) {
+              ...GatsbyImageSharpSizes_noBase64
             }
           }
         }
@@ -61,4 +59,4 @@ query BlogPostByPath($path: String!) {
   }
 `;
 
-export default IndexPage;
+export default BlogPost;
