@@ -7,6 +7,7 @@ module.exports = {
     "gatsby-plugin-react-css-modules",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    "gatsby-plugin-svg-sprite",
     {
       resolve: "gatsby-transformer-remark",
       options: {

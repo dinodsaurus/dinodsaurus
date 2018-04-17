@@ -20,6 +20,9 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             title
             tags
             date(formatString: "Do MMMM YYYY")
+            light
+            noBg
+            long
             thumbnail {
              childImageSharp {
                responsiveSizes(maxWidth: 1128) {
@@ -43,9 +46,8 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
         edges: posts,
         createPage,
         pageTemplate: "src/templates/index.js",
-        pageLength: 2
+        pageLength: 9
       });
-
       posts.forEach(({ node }, index) => {
         createPage({
           path: node.frontmatter.path,

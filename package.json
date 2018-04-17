@@ -12,6 +12,7 @@
     "gatsby-plugin-react-css-modules": "^1.0.14",
     "gatsby-plugin-react-helmet": "^2.0.5",
     "gatsby-plugin-sharp": "^1.6.41",
+    "gatsby-plugin-svg-sprite": "^1.0.0",
     "gatsby-remark-component": "^1.1.3",
     "gatsby-source-filesystem": "^1.5.25",
     "gatsby-transformer-remark": "^1.7.34",

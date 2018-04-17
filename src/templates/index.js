@@ -7,6 +7,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import PageTitle from "../components/PageTitle";
 import BlogPost from "../components/BlogPost";
+import AboutPost from "../components/AboutPost";
 import Pagination from "../components/Pagination";
 
 class IndexPage extends Component {
@@ -28,6 +29,7 @@ class IndexPage extends Component {
         <div className="container">
           <PageTitle />
           <div className="grid">
+            <AboutPost />
             {posts.map(IndexPage.renderBlogPost)}
           </div>
           <Pagination path={pathContext} />

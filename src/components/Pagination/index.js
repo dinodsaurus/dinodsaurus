@@ -9,7 +9,6 @@ class Pagination extends Component {
     const Links = Array(path.pageCount).fill().map((item, i) => {
       const key = (i + 1).toString();
       const activeSt = key == path.index ? {
-        marginRight: "25px",
         color: "black",
         borderBottom: "4px solid #ffa40b"
       } : {};

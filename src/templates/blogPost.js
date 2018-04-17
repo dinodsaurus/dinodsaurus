@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Helmet from "react-helmet";
 import PropTypes from "prop-types";
 import Image from "gatsby-image";
 import { renderAst } from "../helpers/markdownTemplate";
@@ -12,10 +13,12 @@ const BlogPost = (props) => {
   const { frontmatter: post, htmlAst } = props.data.markdownRemark;
   const { prev, next } = props.pathContext;
   const { sizes } = post.thumbnail.childImageSharp;
-  console.log(prev);
-  console.log(next);
   return (
     <div>
+      <Helmet>
+        <title>Dino Trojak | {post.title}</title>
+        <meta name="keywords" content={post.tags.toString()} />
+      </Helmet>
       <div className="container">
         <div>
           <h1 className={styles.title}>{post.title}</h1>

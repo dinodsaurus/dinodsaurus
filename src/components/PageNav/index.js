@@ -13,8 +13,12 @@ const PageNav = ({ prev, next }) => (
             <p>☜  Previous Story</p>
           </div>
           <div
-            className={styles.img}
-            src={prev.frontmatter.thumbnail.childImageSharp.responsiveSizes.src}
+            style={{
+                height: "100px",
+                backgroundImage: `url(${prev.frontmatter.thumbnail.childImageSharp.responsiveSizes.src})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center"
+            }}
           />
         </Link>
         : null }
@@ -27,11 +31,11 @@ const PageNav = ({ prev, next }) => (
             <p>Next Story  ☞ </p>
           </div>
           <div
-            // className={styles.img}
             style={{
                 height: "100px",
                 backgroundImage: `url(${next.frontmatter.thumbnail.childImageSharp.responsiveSizes.src})`,
-                backgroundSize: "cover"
+                backgroundSize: "cover",
+                backgroundPosition: "center"
             }}
           />
         </Link>
