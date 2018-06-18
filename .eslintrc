@@ -1,0 +1,39 @@
+{
+    "root": true,
+    "plugins": [
+      "react",
+      "react-native",
+      "import"
+    ],
+    "env": {
+      "es6": true,
+      "jest": true
+    },
+    "globals": {
+      "requestAnimationFrame": true,
+      "WebSocket": true,
+      "fetch": true
+    },
+    "extends": "airbnb",
+    "parser": "babel-eslint",
+    "rules": {
+      "jsx-a11y/anchor-is-valid": "off",
+      "react/jsx-filename-extension": "off",
+      "react/forbid-prop-types": "off",
+      "react/require-default-props": "off",
+      "import/prefer-default-export": "off",
+      "quotes": ["error", "double"],
+      "comma-dangle": ["error", "never"]
+    },
+    "settings": {
+      "ecmascript": 6,
+      "import/parser": "babel-eslint",
+      "import/resolver": {
+        "babel-module": {},
+        "node": {
+          "extensions": [".js", ".ios.js", ".android.js"]
+        }
+      }
+    }
+  }
+  

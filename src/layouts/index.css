@@ -1,0 +1,30 @@
+@import "../common/variables.css";
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  font-family: var(--regular);
+}
+img{
+  width: 100%;
+}
+.container {
+  width: 1128px;
+  margin: 0 auto;
+}
+
+.grid {
+  margin-top: 50px;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(350px,1fr));
+}
+
+@media screen and (max-width: 1128px) {
+  .container{
+    width: 100%;
+  }
+}

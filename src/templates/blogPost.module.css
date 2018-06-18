@@ -1,0 +1,43 @@
+@import "../common/variables.css";
+.title {
+    font-size: 48px;
+    font-family: var(--heavy);
+    text-align: center;
+}
+.desc {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 5px;
+    color: #bababa;
+}
+.content {
+    width: 600px;
+    margin: 50px auto;
+    font-size: 18px;
+    line-height: 24px;
+    color: #8a8a8a;
+}
+.headImgCont {
+    max-width: 1200px;
+    margin: 50px auto 0;
+}
+
+.content h2 {
+    color: black;
+    font-size: 32px;
+    font-family: var(--heavy);
+    margin: 30px 0;
+    margin-left: -20px;
+    padding-left: 15px;
+    border-left: 5px solid var(--orange);
+    line-height: normal;
+}
+.content h3 {
+    color: black;
+    font-size: 32px;
+    margin: 30px 0;
+    margin-left: -105px;
+    padding-left: 15px;
+    line-height: normal;
+    border-left: 5px solid var(--orange);
+}

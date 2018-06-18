@@ -1,0 +1,90 @@
+@import "../../common/variables.css";
+
+.postContainer{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+    grid-row-end: span 1;
+}
+.aboutContainer{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+    grid-row-end: span 1;
+    grid-column-start: 3;
+    grid-row-start: 1;
+}
+.longCointainer{
+    position: relative;
+    display: inline-block;
+    grid-column-end: span 2;
+    grid-row-end: span 1;
+    overflow: hidden;
+}
+.mainImg {
+    width: 100%;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: transform
+    /* &:hover {
+        transform: scale(1.2);
+    } */
+}
+.aboutImg {
+    width: 100%;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url("../../img/dino.png");
+    transition: transform
+    /* &:hover {
+        transform: scale(1.2);
+    } */
+}
+.desc {
+    position: absolute;
+    bottom: -52px;
+    width: 100%;
+    padding: 20px;
+    transition: bottom .3s;
+    &:hover {
+        bottom: 0;
+    }
+}
+.titleDark {
+    font-family: var(--heavy);
+    font-size: 40px;
+    color: black;
+}
+.titleLight {
+    font-family: var(--heavy);
+    font-size: 40px;
+    color: white;
+}
+.data {
+    border-left: 4px solid var(--orange);
+    margin-top: 15px;
+    padding-left: 10px;
+}
+.tagsDark {
+    font-size: 16px;
+}
+.tagsLight {
+    font-size: 16px;
+    color: white;
+}
+.dateLight {
+    font-size: 16px;
+    color: white;
+}
+
+@media screen and (max-width: 1128px) {
+    .longCointainer{
+        grid-column-end: span 1;
+    }
+  }

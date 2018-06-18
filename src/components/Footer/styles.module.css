@@ -1,0 +1,28 @@
+.container {
+    border-top: solid 1px #dcdcdc;
+    padding: 45px 0;
+    margin-top: 100px;
+}
+.content {
+    width: 1128px;
+    margin: 0 auto;
+}
+.friends {
+    font-size: 14px;
+}
+.list {
+    float: left;
+    margin-right: 25px;
+    color: black;
+}
+.link {
+    color: #a0a0a0;
+    text-decoration: none;
+    transition: .3s color;
+    &:hover {
+        color: black;
+    }
+}
+.social {
+    float: right;
+}
