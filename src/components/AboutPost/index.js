@@ -13,8 +13,8 @@ const BlogPost = ({
     <div className={styles.desc} style={{ backgroundColor: "transparent" }}>
       <h3 className={styles.titleLight}>About me</h3>
       <div className={styles.data}>
-        <p className={styles.dateLight}>A short story</p>
-        <p className={styles.dateLight}>All about me</p>
+        <p className={styles.dateLight}>No pressure</p>
+        <p className={styles.dateLight}>All eyes on me</p>
       </div>
     </div>
   </Link>
