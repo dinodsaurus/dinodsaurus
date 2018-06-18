@@ -7,8 +7,8 @@ const PageTitle = () => (
   <div className={styles.container}>
     <img className={styles.logo} src={logo} />
     <h1 className={styles.title}>Dino Trojak</h1>
-    <h2 className={styles.subtitle}>Muay thai ninja, downhill jedi, master of code, almost marathoner.<br />
-        One tough mofo.
+    <h2 className={styles.subtitle}>Muay thai ninja, enduro jedi, master of code and almost marathoner.<br />
+        Some new activity coming soon..
     </h2>
   </div>
 );

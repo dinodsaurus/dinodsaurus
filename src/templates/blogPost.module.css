@@ -18,10 +18,15 @@
     color: #8a8a8a;
 }
 .headImgCont {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 50px auto 0;
 }
-
+.content a {
+    color: var(--orange);
+}
+.content a:hover {
+    color: black;
+}
 .content h2 {
     color: black;
     font-size: 32px;

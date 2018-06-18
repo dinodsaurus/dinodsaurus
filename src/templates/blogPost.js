@@ -38,7 +38,8 @@ const BlogPost = (props) => {
 };
 
 BlogPost.propTypes = {
-  data: PropTypes.object
+  data: PropTypes.object,
+  pathContext: PropTypes.object
 };
 
 export const BlogPostQuery = graphql`

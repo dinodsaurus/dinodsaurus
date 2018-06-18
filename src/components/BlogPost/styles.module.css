@@ -56,6 +56,16 @@
         bottom: 0;
     }
 }
+.smallDesc {
+    position: absolute;
+    bottom: -36px;
+    width: 100%;
+    padding: 20px;
+    transition: bottom .3s;
+    &:hover {
+        bottom: 0;
+    }
+}
 .titleDark {
     font-family: var(--heavy);
     font-size: 40px;
