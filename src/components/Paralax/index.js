@@ -65,7 +65,7 @@ const Header = () => (
         }}
       />
     </ParallaxProvider>
-    <img src={Layer9} style={{ margin: 0 }} alt="" />
+    <img src={Layer9} style={{ margin: 0, width: "100%" }} alt="" />
   </div>
 );
 

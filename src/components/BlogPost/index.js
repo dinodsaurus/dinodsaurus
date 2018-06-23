@@ -4,9 +4,10 @@ import PropTypes from "prop-types";
 import styles from "./styles.module.css";
 
 const BlogPost = ({
-  post
+  post,
+  first
 }) => (
-  <Link to={post.path} className={post.long ? styles.longCointainer : styles.postContainer}>
+  <Link to={post.path} className={first ? styles.longCointainer : styles.postContainer}>
     <div
       className={styles.mainImg}
       style={{

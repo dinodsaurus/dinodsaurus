@@ -17,6 +17,7 @@ class IndexPage extends Component {
       <BlogPost
         key={i}
         post={post}
+        first={i===0}
       />
     );
   }
