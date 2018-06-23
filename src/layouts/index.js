@@ -8,7 +8,6 @@ import "./index.css";
 import appleTouch from "../img/favicon/apple-touch-icon.png";
 import favicon32 from "../img/favicon/favicon-32x32.png";
 import favicon16 from "../img/favicon/favicon-16x16.png";
-import safariPinned from "../img/favicon/safari-pinned-tab.svg";
 
 const TemplateWrapper = ({ children }) => (
   <div>

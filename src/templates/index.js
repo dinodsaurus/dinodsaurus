@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 // import { renderAst } from "../helpers/markdownTemplate";
 
 
-import Header from "../components/Header";
+import Paralax from "../components/Paralax";
 import Footer from "../components/Footer";
 import PageTitle from "../components/PageTitle";
 import BlogPost from "../components/BlogPost";
@@ -25,7 +25,7 @@ class IndexPage extends Component {
     const { group: posts } = pathContext;
     return (
       <div>
-        <Header />
+        <Paralax />
         <div className="container">
           <PageTitle />
           <div className="grid">

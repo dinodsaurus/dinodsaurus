@@ -1,0 +1,17 @@
+.container{
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 40px;
+}
+.link {
+    font-size: 14px;
+    color: black;
+}
+.logo {
+    height: 36px;
+    width: auto;
+}

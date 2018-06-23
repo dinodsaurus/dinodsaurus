@@ -25,7 +25,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             long
             thumbnail {
              childImageSharp {
-               responsiveSizes(maxWidth: 1128) {
+               responsiveSizes(maxWidth: 1000) {
                  src
                }
              }
