@@ -4,6 +4,8 @@
     margin-top: 100px;
 }
 .content {
+    display: flex;
+    justify-content: space-between;
     width: 1128px;
     margin: 0 auto;
 }
@@ -15,6 +17,7 @@
     margin-right: 25px;
     color: black;
 }
+
 .link {
     color: #a0a0a0;
     text-decoration: none;
@@ -23,6 +26,18 @@
         color: black;
     }
 }
-.social {
-    float: right;
-}
+
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 20px;
+        width: 100%;
+        margin-top: 50px;
+    }
+    .content {
+        width: 100%;
+        flex-direction: column;
+    }
+    .social {
+        margin-top: 20px;
+    }
+  }

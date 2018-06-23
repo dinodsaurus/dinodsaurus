@@ -11,7 +11,17 @@
     font-size: 14px;
     color: black;
 }
+.none {
+    opacity: 0;
+}
 .logo {
     height: 36px;
     width: auto;
 }
+
+@media screen and (max-width: 600px) {
+    .container {
+        width: 100%;
+        padding: 20px;
+    }
+  }

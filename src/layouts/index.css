@@ -12,6 +12,9 @@ body {
   width: 1128px;
   margin: 0 auto;
 }
+* {
+  box-sizing: border-box;
+}
 
 .grid {
   margin-top: 50px;

@@ -2,6 +2,7 @@
 
 .nav {
     display: flex;
+    flex: 1;
     margin: 65px auto;
     max-width: 800px;
     flex-direction: row;
@@ -9,7 +10,6 @@
     padding-top: 65px;
 }
 .post {
-    flex-direction: row;
     flex: 0.5;
     &:first-child {
         margin-right: 10px;
@@ -39,3 +39,17 @@
     color: #afafaf;
     margin-top: 5px;
 }
+
+@media screen and (max-width: 600px) {
+    .nav{
+       flex-direction: column;
+    }
+    .post {
+        &:first-child {
+            margin-right: 0;
+        }
+        &:last-child {
+            margin-left: 0;
+        }
+    }
+  }

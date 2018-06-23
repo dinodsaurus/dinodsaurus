@@ -8,7 +8,7 @@ const Heading = () => (
     <div className={styles.container}>
         <Link className={styles.link} to="/">☜  Back to Blog</Link>
         <img className={styles.logo} src={logo} />
-        <div/>
+        <Link className={styles.none} to="/">☜  Back to Blog</Link>
     </div>
 )
 
