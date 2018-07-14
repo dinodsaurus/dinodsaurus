@@ -37,6 +37,9 @@
         width: 100%;
         flex-direction: column;
     }
+    .friends li {
+        margin-top: 10px;
+    }
     .social {
         margin-top: 20px;
     }
