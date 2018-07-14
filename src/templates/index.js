@@ -17,10 +17,11 @@ class IndexPage extends Component {
       <BlogPost
         key={i}
         post={post}
-        first={i===0}
+        first={i === 0}
       />
     );
   }
+
   render() {
     const { pathContext } = this.props;
     const { group: posts } = pathContext;

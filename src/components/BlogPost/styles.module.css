@@ -93,6 +93,12 @@
     color: white;
 }
 
+@media screen and (max-width: 720px) {
+    .aboutContainer{
+        grid-column-start: 1;
+    }
+  }
+
 @media screen and (max-width: 1128px) {
     .longCointainer{
         grid-column-end: span 1;

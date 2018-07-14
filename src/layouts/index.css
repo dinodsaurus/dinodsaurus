@@ -23,6 +23,12 @@ body {
   grid-template-columns: repeat(auto-fill, minmax(350px,1fr));
 }
 
+@media screen and (max-width: 720px) {
+  .grid{
+    width: 100%;
+    grid-template-columns: 100%;
+  }
+}
 @media screen and (max-width: 1128px) {
   .container{
     width: 100%;

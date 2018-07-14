@@ -31,11 +31,35 @@ const BlogPost = () => (
         <img src={crew} alt="crew" />
       </div>
       <div className={styles.content}>
-        Hi, my name is Dino I’m 27 and founder of Reactor studio based in Zagreb. I love building quality software and experiment with new technologies. My language of choice is JavaScript. I believe in Agile practices and TDD. What does that mean? It means I’m devoted to awesome tests and I don’t settle for anything less. It means my definition of '’refactoring’’ doesn’t consider only the code. Yes, I consider myself a pragmatic journeyman. I’m a fast adopter and I care about details. I like to know how things work internally, whether it’s a testing framework, an interpreter, or a web­framework. I’m continuously working on improving my ever-expanding skillset. I absolutely love to hack on tools to make my environment more efficient (coding/non-coding). I advocate regular exercise so I can have a clear mind and good idea flow. I’m on my enduro bike whenever I find some spare time. Also, I love my green race bike which I ride all year long for commuting. The community is important to me that's why I'm a JavaScript Zagreb organizer, NodeSchool Zagreb organizer and MOP fest co-organizer.
-
+        Hi, my name is Dino I’m 27 and founder of
+        {" "}
+        <a href="https://github.com/reactor-studio">
+          Reactor studio
+        </a>
+        {" "}
+          based in Zagreb. I love building quality software and experiment with new technologies. My language of choice is JavaScript. I believe in Agile practices and TDD. What does that mean? It means I’m devoted to awesome tests and I don’t settle for anything less. It means my definition of '’refactoring’’ doesn’t consider only the code. Yes, I consider myself a pragmatic journeyman. I’m a fast adopter and I care about details. I like to know how things work internally, whether it’s a testing framework, an interpreter, or a web­framework. I’m continuously working on improving my ever-expanding skillset. I absolutely love to hack on tools to make my environment more efficient (coding/non-coding). I advocate regular exercise so I can have a clear mind and good idea flow. I’m on my enduro bike whenever I find some spare time. Also, I love my green race bike which I ride all year long for commuting. The community is important to me that's why I'm a
+        {" "}
+        <a href="http://jszgb.com/">
+          JavaScript Zagreb
+        </a>
+        {" "}
+        organizer,
+        {" "}
+        <a href="https://nodeschool.io/zagreb/">
+          NodeSchool Zagreb
+        </a>
+        {" "}
+        organizer and
+        {" "}
+        <a href="https://www.mop-fest.com/">
+          MOP fest
+        </a>
+        {" "}
+        co-organizer.
       </div>
       <div className={styles.instagram}>
         <iframe
+          title="instagram"
           src="//lightwidget.com/widgets/2667a5dcd0285a61a13eeb54532858ad.html"
           scrolling="no"
           allowTransparency="true"
