@@ -1,7 +1,5 @@
 import React from "react";
 import Helmet from "react-helmet";
-import ReactShowSvg from "react-show-svg";
-import ReactSVG from "react-svg";
 
 import batman from "../img/batman.png";
 import crew from "../img/crew.jpg";
