@@ -12,13 +12,19 @@ const BlogPost = ({
       className={styles.mainImg}
       style={{
         backgroundImage: `url("${post.thumbnail.childImageSharp.responsiveSizes.src}")`
-    }}
+      }}
     />
     <div className={styles.desc} style={{ backgroundColor: post.noBg ? "transparent" : "white" }}>
-      <h3 className={post.light ? styles.titleLight : styles.titleDark}>{post.title}</h3>
+      <h3 className={post.light ? styles.titleLight : styles.titleDark}>
+        {post.title}
+      </h3>
       <div className={styles.data}>
-        <p className={post.light ? styles.tagsLight : styles.tagsDark}>{post.tags.map(p => `${p} • `)}</p>
-        <p className={post.light ? styles.dateLight : styles.dateDark}>{post.date}</p>
+        <p className={post.light ? styles.tagsLight : styles.tagsDark}>
+          {post.tags.map(p => `${p} • `)}
+        </p>
+        <p className={post.light ? styles.dateLight : styles.dateDark}>
+          {post.date}
+        </p>
       </div>
     </div>
   </Link>

@@ -1,32 +1,34 @@
 import React from "react";
 import Helmet from "react-helmet";
+import Image from "gatsby-image";
 
 import batman from "../img/batman.png";
-import crew from "../img/crew.jpg";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 import styles from "./about.module.css";
 
-const BlogPost = () => (
+const BlogPost = ({ data }) => (
   <div>
-    <Helmet>
-      <title>
+    <div>
+      <Helmet>
+        <title>
           Dino Trojak | About
-      </title>
-    </Helmet>
-    <Header />
-    <div className={styles.container}>
-      <img className={styles.icon} src={batman} alt="batman" />
+        </title>
+      </Helmet>
+      <Header />
+      <div className={styles.container}>
+        <img className={styles.icon} src={batman} alt="batman" />
 
-      <h1 className={styles.title}>
+        <h1 className={styles.title}>
         About me
-      </h1>
-      <p className={styles.desc}>
+        </h1>
+        <p className={styles.desc}>
         It's really short I promise
-      </p>
+        </p>
+      </div>
       <div className={styles.headImgCont}>
-        <img src={crew} alt="crew" />
+        <Image sizes={data.headerImage.sizes} />
       </div>
       <div className={styles.content}>
         Hi, my name is Dino I’m 27 and founder of
@@ -70,5 +72,15 @@ const BlogPost = () => (
     <Footer />
   </div>
 );
+
+export const pageQuery = graphql`
+  query HeaderImageQuery {
+    headerImage: imageSharp(id: { regex: "/crew.jpg/" }) {
+      sizes(maxWidth: 2000) {
+        ...GatsbyImageSharpSizes_noBase64
+      }
+    }
+  }
+`;
 
 export default BlogPost;
