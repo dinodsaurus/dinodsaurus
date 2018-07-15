@@ -26,7 +26,7 @@ const BlogPost = ({
       </h3>
       <div className={styles.data}>
         <p className={post.light ? styles.tagsLight : styles.tagsDark}>
-          {post.tags.map(p => `${p} • `)}
+          {post.tags.join(" • ")}
         </p>
         <p className={post.light ? styles.dateLight : styles.dateDark}>
           {post.date}

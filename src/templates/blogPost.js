@@ -49,7 +49,7 @@ const BlogPost = (props) => {
         <p className={styles.desc}>
           {post.tags.join(", ")}
           {" "}
-•
+          •
           {" "}
           {post.date}
         </p>
