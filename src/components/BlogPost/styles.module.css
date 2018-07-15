@@ -102,6 +102,13 @@
     .aboutContainer{
         grid-column-start: 1;
     }
+    .desc {
+        padding: 20px!important;
+        bottom: 0;
+    }
+    .smallDesc {
+        bottom: 0;
+    }
   }
 
 @media screen and (max-width: 1128px) {
