@@ -5,11 +5,17 @@ import styles from "./styles.module.css";
 import logo from "../../img/dino.jpg";
 
 const Heading = () => (
-    <div className={styles.container}>
-        <Link className={styles.link} to="/">☜  Back to Blog</Link>
-        <img className={styles.logo} src={logo} />
-        <Link className={styles.none} to="/">☜  Back to Blog</Link>
-    </div>
-)
+  <div className={styles.container}>
+    <Link className={styles.link} to="/">
+      <span className={styles.hand}>
+        ☜
+      </span>
+      <span>
+        Back to Blog
+      </span>
+    </Link>
+    <img className={styles.logo} src={logo} alt="Dino logo" />
+  </div>
+);
 
 export default Heading;

@@ -13,6 +13,7 @@
     text-align: center;
     font-size:48px;
     font-family: var(--heavy);
+    margin-bottom: 10px;
 }
 
 .subtitle {
@@ -20,3 +21,9 @@
     color: #8a8a8a;
     line-height: 1.33;
 }
+
+@media screen and (max-width: 600px) {
+    .subtitle{
+        padding: 0 30px;
+    } 
+  }

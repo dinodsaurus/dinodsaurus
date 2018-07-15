@@ -1,8 +1,5 @@
 .container{
-    /* background-color: red; */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    position:relative;
     padding: 40px;
     border-bottom: 1px solid #e5e5e5;
     margin-bottom: 40px;
@@ -11,12 +8,22 @@
     font-size: 14px;
     color: black;
 }
+.hand {
+    font-size: 18px;
+    line-height: 0;
+    margin-right: 5px;
+    vertical-align: middle;
+}
 .none {
     opacity: 0;
 }
 .logo {
-    height: 36px;
-    width: auto;
+    position: absolute;
+    left: 50%;
+    top: 27px;
+    margin-left: -18px;
+    height: auto;
+    width: 36px;
 }
 
 @media screen and (max-width: 600px) {

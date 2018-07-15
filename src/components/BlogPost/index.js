@@ -14,7 +14,13 @@ const BlogPost = ({
         backgroundImage: `url("${post.thumbnail.childImageSharp.responsiveSizes.src}")`
       }}
     />
-    <div className={styles.desc} style={{ backgroundColor: post.noBg ? "transparent" : "white" }}>
+    <div
+      className={styles.desc}
+      style={{
+        backgroundColor: post.noBg ? "transparent" : "white",
+        padding: post.noBg ? "20px" : "20px 0"
+      }}
+    >
       <h3 className={post.light ? styles.titleLight : styles.titleDark}>
         {post.title}
       </h3>
@@ -31,7 +37,8 @@ const BlogPost = ({
 );
 
 BlogPost.propTypes = {
-  post: PropTypes.object
+  post: PropTypes.object,
+  first: PropTypes.bool
 };
 
 export default BlogPost;
