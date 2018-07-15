@@ -57,17 +57,16 @@ const BlogPost = ({ data }) => (
         {" "}
         co-organizer.
       </div>
-      <div className={styles.instagram}>
-        <iframe
-          title="instagram"
-          src="//lightwidget.com/widgets/2667a5dcd0285a61a13eeb54532858ad.html"
-          scrolling="no"
-          allowTransparency="true"
-          className="lightwidget-widget"
-          style={{ width: "100%", border: 0, overflow: "hidden" }}
-        />
-      </div>
-      <script src="https://cdn.lightwidget.com/widgets/lightwidget.js" />
+    </div>
+    <div className={styles.instagram}>
+      <iframe
+        title="instagram"
+        src="//lightwidget.com/widgets/2667a5dcd0285a61a13eeb54532858ad.html"
+        scrolling="no"
+        allowTransparency="true"
+        className="lightwidget-widget"
+        style={{ width: "100%", border: 0, overflow: "hidden" }}
+      />
     </div>
     <Footer />
   </div>
