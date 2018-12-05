@@ -1,3 +1,5 @@
+const path = require("path");
+
 module.exports = {
   siteMetadata: {
     title: "Dino Trojak | dinodsaurus"
@@ -5,9 +7,9 @@ module.exports = {
   plugins: [
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-react-css-modules",
+    "gatsby-plugin-svg-sprite",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
-    "gatsby-plugin-svg-sprite",
     {
       resolve: "gatsby-transformer-remark",
       options: {
@@ -18,7 +20,7 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "src",
-        path: `${__dirname}/src`
+        path: path.join(__dirname, "src")
       }
     },
     {

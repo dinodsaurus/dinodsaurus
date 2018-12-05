@@ -2,13 +2,13 @@ import React from "react";
 
 import styles from "./styles.module.css";
 
-const Youtube = props => (
+const Youtube = ({ url }) => (
   <div className={styles.youtube}>
     <iframe
       title="youtube"
       height="405"
       width="700"
-      src={props.url}
+      src={url}
       frameBorder="0"
       allow="encrypted-media"
       allowFullScreen
