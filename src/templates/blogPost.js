@@ -29,15 +29,15 @@ const BlogPost = (props) => {
   } else if (post.tags.indexOf("hike") > -1) {
     headIcon = mountains;
   }
-
   return (
     <div>
       <Helmet>
         <title>
 Dino Trojak |
-          {post.title}
+          {` ${post.title}`}
         </title>
         <meta name="keywords" content={post.tags.toString()} />
+        <meta property="og:image" content={`https://www.dinodsaur.us${sizes.src}`} />
       </Helmet>
       <Header />
       <div className={styles.container}>
