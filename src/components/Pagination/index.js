@@ -10,12 +10,12 @@ class Pagination extends Component {
       .fill()
       .map((item, i) => {
         const key = (i + 1).toString();
-        const activeSt =					key === path.index
-					  ? {
-					    color: "black",
-					    borderBottom: "4px solid #ffa40b"
-						  }
-					  : {};
+        const activeSt = key === path.index
+          ? {
+            color: "black",
+            borderBottom: "4px solid #ffa40b"
+          }
+          : {};
 
         return (
           <Link key={key} to={key === 1 ? "" : key} className={styles.link} activeStyle={activeSt}>
