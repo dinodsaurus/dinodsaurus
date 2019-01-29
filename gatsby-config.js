@@ -9,13 +9,22 @@ module.exports = {
     "gatsby-plugin-react-css-modules",
     "gatsby-plugin-svg-sprite",
     "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
     {
       resolve: "gatsby-transformer-remark",
       options: {
-        plugins: ["gatsby-remark-component", "gatsby-remark-prismjs"]
+        plugins: [
+          {
+            resolve: "gatsby-remark-images",
+            options: {
+              maxWidth: 1000
+            }
+          },
+          "gatsby-remark-component",
+          "gatsby-remark-prismjs"
+        ]
       }
     },
+    "gatsby-transformer-sharp",
     {
       resolve: "gatsby-source-filesystem",
       options: {

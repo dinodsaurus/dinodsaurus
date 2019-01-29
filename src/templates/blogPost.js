@@ -22,7 +22,7 @@ const BlogPost = (props) => {
   const { prev, next } = props.pathContext;
   const { sizes } = post.thumbnail.childImageSharp;
   let headIcon = compass;
-  if (post.tags.indexOf("mtb") > -1) {
+  if (post.tags.indexOf("bike") > -1) {
     headIcon = bike;
   } else if (post.tags.indexOf("code") > -1) {
     headIcon = keyboard;
@@ -34,8 +34,7 @@ const BlogPost = (props) => {
     <div>
       <Helmet>
         <title>
-          Dino Trojak |
-          {" "}
+Dino Trojak |
           {post.title}
         </title>
         <meta name="keywords" content={post.tags.toString()} />
@@ -43,23 +42,18 @@ const BlogPost = (props) => {
       <Header />
       <div className={styles.container}>
         <img className={styles.icon} src={headIcon} alt="headIcon" />
-        <h1 className={styles.title}>
-          {post.title}
-        </h1>
+        <h1 className={styles.title}>{post.title}</h1>
         <p className={styles.desc}>
           {post.tags.join(", ")}
           {" "}
-          •
-          {" "}
+•
           {post.date}
         </p>
       </div>
       <div className={styles.headImgCont}>
         <Image sizes={sizes} />
       </div>
-      <div className={styles.content}>
-        {renderAst(htmlAst)}
-      </div>
+      <div className={styles.content}>{renderAst(htmlAst)}</div>
       <PageNav prev={prev} next={next} />
       <Footer />
     </div>
@@ -72,8 +66,8 @@ BlogPost.propTypes = {
 };
 
 export const BlogPostQuery = graphql`
-query BlogPostByPath($path: String!) {
-    markdownRemark(frontmatter: {path: {eq: $path}}) {
+  query BlogPostByPath($path: String!) {
+    markdownRemark(frontmatter: { path: { eq: $path } }) {
       htmlAst
       id
       frontmatter {

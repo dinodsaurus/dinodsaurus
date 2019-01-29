@@ -1,79 +1,87 @@
 @import "../common/variables.css";
 .title {
-    font-size: 48px;
-    font-family: var(--heavy);
-    text-align: center;
+  font-size: 48px;
+  font-family: var(--heavy);
+  text-align: center;
 }
 .icon {
-    width: 37px;
+  width: 37px;
 }
 .desc {
-    font-size: 16px;
-    text-align: center;
-    margin-top: 5px;
-    color: #bababa;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 5px;
+  color: #bababa;
 }
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.container h1{
-    margin: 10px 0;
+.container h1 {
+  margin: 10px 0;
 }
 .content {
-    width: 600px;
-    margin: 50px auto;
-    font-size: 18px;
-    line-height: 24px;
-    color: #8a8a8a;
+  width: 600px;
+  margin: 50px auto;
+  font-size: 18px;
+  line-height: 24px;
+  color: #8a8a8a;
 }
 .headImgCont {
-    max-width: 1000px;
-    margin: 50px auto 0;
+  max-width: 1000px;
+  margin: 50px auto 0;
 }
 .content p {
-    margin: 15px 0;
+  margin: 15px 0;
 }
 .content a {
-    color: var(--orange);
+  color: var(--orange);
 }
 .content a:hover {
-    color: black;
+  color: black;
 }
 .content h2 {
-    color: black;
-    font-size: 32px;
-    font-family: var(--heavy);
-    margin: 30px 0;
-    margin-left: -20px;
-    padding-left: 15px;
-    border-left: 5px solid var(--orange);
-    line-height: normal;
+  color: black;
+  font-size: 32px;
+  font-family: var(--heavy);
+  margin: 30px 0;
+  margin-left: -20px;
+  padding-left: 15px;
+  border-left: 5px solid var(--orange);
+  line-height: normal;
 }
 .content h3 {
-    color: black;
-    font-size: 32px;
-    margin: 30px 0;
-    margin-left: -105px;
-    padding-left: 15px;
-    line-height: normal;
-    border-left: 5px solid var(--orange);
+  color: black;
+  font-size: 32px;
+  margin: 30px 0;
+  margin-left: -105px;
+  padding-left: 15px;
+  line-height: normal;
+  border-left: 5px solid var(--orange);
 }
 
 .content blockquote {
-    padding: 0 1em;
-    font-size: 14px;
-    border-left: 0.25em solid #dfe2e5;
+  padding: 0 1em;
+  font-size: 14px;
+  border-left: 0.25em solid #dfe2e5;
+}
+
+.content a > span {
+  margin: 30px -20px 30px -20px !important;
+}
+
+.content strong {
+  font-family: var(--heavy);
 }
 
 @media screen and (max-width: 600px) {
-    .content {
-        width: 100%;
-        padding: 0 20px;
-    }
-    iframe {
-        width: 100%;
-        margin-left: 0;
-    }
+  .content {
+    width: 100%;
+    padding: 0 20px;
   }
+  iframe {
+    width: 100%;
+    margin-left: 0;
+  }
+}

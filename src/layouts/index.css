@@ -20,18 +20,22 @@ body {
   margin-top: 50px;
   display: grid;
   grid-gap: 20px;
-  grid-template-columns: repeat(auto-fill, minmax(350px,1fr));
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+}
+
+.contnet .gatsby-resp-image-link {
+  margin: 30px -20px 30px -20px;
 }
 
 @media screen and (max-width: 720px) {
-  .grid{
+  .grid {
     width: 100%;
     grid-template-columns: 100%;
   }
 }
 @media screen and (max-width: 1128px) {
-  .container{
+  .container {
     width: 100%;
-    grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
 }
