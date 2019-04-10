@@ -12,6 +12,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
           node {
             html
             id
+            excerpt
             frontmatter {
               path
               title

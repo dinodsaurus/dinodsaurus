@@ -18,7 +18,7 @@ import keyboard from "../img/keyboard.png";
 import "prismjs/themes/prism-okaidia.css";
 
 const BlogPost = (props) => {
-  const { frontmatter: post, htmlAst } = props.data.markdownRemark;
+  const { frontmatter: post, htmlAst, excerpt } = props.data.markdownRemark;
   const { prev, next } = props.pathContext;
   const { sizes } = post.thumbnail.childImageSharp;
   let headIcon = compass;
@@ -37,6 +37,7 @@ Dino Trojak |
           {` ${post.title}`}
         </title>
         <meta name="keywords" content={post.tags.toString()} />
+        <meta name="description" content={excerpt} />
         <meta property="og:image" content={`https://www.dinodsaur.us${sizes.src}`} />
       </Helmet>
       <Header />
@@ -70,6 +71,7 @@ export const BlogPostQuery = graphql`
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       htmlAst
       id
+      excerpt
       frontmatter {
         path
         title
