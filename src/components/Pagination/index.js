@@ -16,9 +16,9 @@ class Pagination extends Component {
             borderBottom: "4px solid #ffa40b"
           }
           : {};
-
+        console.log(key);
         return (
-          <Link key={key} to={key === 1 ? "" : key} className={styles.link} activeStyle={activeSt}>
+          <Link key={key} to={key === "1" ? "" : key} className={styles.link} activeStyle={activeSt}>
             {key}
           </Link>
         );

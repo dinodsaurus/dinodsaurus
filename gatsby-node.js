@@ -43,8 +43,10 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       edges: posts,
       createPage,
       pageTemplate: "src/templates/index.js",
-      pageLength: 20
+      pageLength: 7,
+      buildPath: index => (index > 1 ? `/${index}` : "/")
     });
+
     posts.forEach(({ node }, index) => {
       createPage({
         path: node.frontmatter.path,
