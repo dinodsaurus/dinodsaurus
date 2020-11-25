@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import Image from "gatsby-image";
 import { renderAst } from "../helpers/markdownTemplate";
 
+import Layout from "../layouts";
 import Header from "../components/Header";
 import PageNav from "../components/PageNav";
 import Footer from "../components/Footer";
@@ -30,10 +31,10 @@ const BlogPost = (props) => {
     headIcon = mountains;
   }
   return (
-    <div>
+    <Layout>
       <Helmet>
         <title>
-Dino Trojak |
+          Dino Trojak |
           {` ${post.title}`}
         </title>
         <meta name="keywords" content={post.tags.toString()} />
@@ -57,7 +58,7 @@ Dino Trojak |
       <div className={styles.content}>{renderAst(htmlAst)}</div>
       <PageNav prev={prev} next={next} />
       <Footer />
-    </div>
+    </Layout>
   );
 };
 

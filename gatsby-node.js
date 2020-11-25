@@ -22,7 +22,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
               noBg
               thumbnail {
                 childImageSharp {
-                  responsiveSizes(maxWidth: 1000) {
+                  fluid(maxWidth: 1000) {
                     src
                   }
                 }

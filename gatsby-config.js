@@ -6,9 +6,14 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-react-css-modules",
     "gatsby-plugin-svg-sprite",
-    "gatsby-plugin-sharp",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "src",
+        path: path.join(__dirname, "src")
+      }
+    },
     {
       resolve: "gatsby-transformer-remark",
       options: {
@@ -25,13 +30,7 @@ module.exports = {
       }
     },
     "gatsby-transformer-sharp",
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "src",
-        path: path.join(__dirname, "src")
-      }
-    },
+    "gatsby-plugin-sharp",
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {

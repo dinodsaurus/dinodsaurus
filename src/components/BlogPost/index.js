@@ -11,7 +11,7 @@ const BlogPost = ({
     <div
       className={styles.mainImg}
       style={{
-        backgroundImage: `url("${post.thumbnail.childImageSharp.responsiveSizes.src}")`
+        backgroundImage: `url("${post.thumbnail.childImageSharp.fluid.src}")`
       }}
     />
     <div
