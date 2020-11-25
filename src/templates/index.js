@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 // import { renderAst } from "../helpers/markdownTemplate";
 
-
+import Layout from "../layouts";
 import Paralax from "../components/Paralax";
 import Footer from "../components/Footer";
 import PageTitle from "../components/PageTitle";
@@ -26,7 +26,7 @@ class IndexPage extends Component {
     const { pathContext } = this.props;
     const { group: posts } = pathContext;
     return (
-      <div>
+      <Layout>
         <Paralax />
         <div className="container">
           <PageTitle />
@@ -37,7 +37,7 @@ class IndexPage extends Component {
           <Pagination path={pathContext} />
         </div>
         <Footer />
-      </div>
+      </Layout>
     );
   }
 }

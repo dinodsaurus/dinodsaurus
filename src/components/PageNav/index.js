@@ -16,7 +16,7 @@ const PageNav = ({ prev, next }) => (
           <div
             style={{
 						  height: "100px",
-						  backgroundImage: `url(${prev.frontmatter.thumbnail.childImageSharp.responsiveSizes.src})`,
+						  backgroundImage: `url(${prev.frontmatter.thumbnail.childImageSharp.fluid.src})`,
 						  backgroundSize: "cover",
 						  backgroundPosition: "center"
             }}
@@ -34,7 +34,7 @@ const PageNav = ({ prev, next }) => (
           <div
             style={{
 						  height: "100px",
-						  backgroundImage: `url(${next.frontmatter.thumbnail.childImageSharp.responsiveSizes.src})`,
+						  backgroundImage: `url(${next.frontmatter.thumbnail.childImageSharp.fluid.src})`,
 						  backgroundSize: "cover",
 						  backgroundPosition: "center"
             }}
